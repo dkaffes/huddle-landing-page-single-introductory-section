@@ -1,0 +1,235 @@
+/**************************/
+/* Mobile-first design */
+/**************************/
+
+/* Custom properties (variables) for colors */
+
+:root {
+  --clr-violet: hsl(257, 40%, 49%);
+  --clr-soft-magenta: hsl(300, 69%, 71%);
+}
+
+/* Google Fonts */
+/**************************/
+/* Open Sans: CSS class for a variable style */
+/* <uniquifier>: Use a uniquifier for the class name */
+/* .open-sans-<uniquifier> */
+
+.open-sans-huddle {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+/* Poppins: CSS classes */
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/**************************/
+/* CSS Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/**************************/
+/* General styling */
+
+body {
+  background: no-repeat top/100% url(./images/bg-mobile.svg), var(--clr-violet);
+  color: hsl(0, 0%, 100%);
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3.5rem;
+  margin: 2rem;
+}
+
+/* Images */
+img {
+  display: block;
+}
+
+/* Buttons */
+.btn {
+  cursor: pointer;
+}
+
+/**************************/
+/* Header section*/
+
+.header {
+  align-self: flex-start;
+}
+
+.logo-image {
+  max-width: 50%;
+}
+
+/**************************/
+/* Main section */
+
+.main {
+  max-width: 40rem;
+}
+
+.hero-image {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.hero-text-box {
+  text-align: center;
+  padding: 0.3rem;
+}
+
+.hero-text-title,
+.hero-text-description {
+  margin-bottom: 1.3rem;
+}
+
+.hero-text-title {
+  font-size: 1.5rem;
+}
+
+.hero-text-description {
+  line-height: 1.5;
+}
+
+.hero-btn {
+  display: inline-block;
+  width: 70%;
+  padding: 0.8rem 1.6rem;
+  text-decoration: none;
+  background-color: #fff;
+  border-radius: 80px;
+  box-shadow: 0 10px 15px 0 rgb(0, 0, 0, 0.2);
+  transition: all 200ms;
+
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: var(--clr-soft-magenta);
+    color: #fff;
+  }
+}
+
+/**************************/
+/* Footer section*/
+
+.footer {
+  padding: 0.5rem;
+}
+
+.social-links {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+ion-icon {
+  font-size: 1rem;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 0.4em;
+  border-radius: 50%;
+  transition: all 200ms;
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: var(--clr-soft-magenta);
+    border-color: var(--clr-soft-magenta);
+  }
+}
+
+.attribution {
+  font-size: 0.6875rem; /* 11px */
+  text-align: center;
+  margin-block: 2rem;
+}
+
+.attribution a {
+  color: hsl(0, 0%, 100%);
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: var(--clr-soft-magenta);
+  }
+}
+
+/**************************/
+/* MEDIA QUERIES */
+/* changing the component layout to a 2-column grid at 960px */
+/**************************/
+@media (width >= 60rem) {
+  body {
+    background-image: url(./images/bg-desktop.svg);
+    margin: 3rem 3rem 0 3rem;
+    gap: 1rem;
+  }
+
+  .header {
+    margin-bottom: 5rem;
+  }
+
+  .logo-image {
+    max-width: 80%;
+  }
+
+  .main {
+    max-width: 90rem; /* 1440px */
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: start;
+    gap: 2rem;
+  }
+
+  .hero-image {
+    margin-bottom: 0;
+  }
+
+  .hero-text-box {
+    text-align: left;
+    padding: 3rem 2.5rem 0 2rem;
+  }
+
+  .hero-text-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-btn {
+    width: 40%;
+    text-align: center;
+  }
+
+  .footer {
+    width: 100%;
+  }
+
+  .social-links {
+    justify-content: flex-end;
+  }
+
+  ion-icon {
+    font-size: 1.5rem;
+  }
+}
