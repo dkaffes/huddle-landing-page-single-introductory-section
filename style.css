@@ -49,6 +49,7 @@
 /* General styling */
 
 body {
+  min-height: 100vh;
   background: no-repeat top/100% url(./images/bg-mobile.svg), var(--clr-violet);
   color: hsl(0, 0%, 100%);
   font-size: 1rem;
@@ -57,7 +58,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 3.5rem;
-  margin: 2rem;
+  padding: 2rem;
 }
 
 /* Images */
@@ -115,6 +116,7 @@ img {
   display: inline-block;
   width: 70%;
   padding: 0.8rem 1.6rem;
+
   text-decoration: none;
   background-color: #fff;
   border-radius: 80px;
@@ -183,7 +185,7 @@ ion-icon {
 @media (width >= 60rem) {
   body {
     background-image: url(./images/bg-desktop.svg);
-    margin: 3rem 3rem 0 3rem;
+    padding: 3rem 3rem 0 3rem;
     gap: 1rem;
   }
 
